@@ -4,12 +4,22 @@ GREEN='\033[0;32m'
 RED='\033[0;31m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
+MAGENTA='\033[1;35m'
+CYAN='\033[0;36m'
 NC='\033[0m'
 
+# Cool Banner
+printf "${MAGENTA}%s\n" \
+"┌────────────────────────────────────────────────────────────┐" \
+"│ ${CYAN}  ██╗   ██╗██╗   ██╗██╗     ███╗   ██╗     ██╗      ${MAGENTA}│" \
+"│ ${CYAN}  ██║   ██║██║   ██║██║     ████╗  ██║     ██║      ${MAGENTA}│" \
+"│ ${CYAN}  ██║   ██║██║   ██║██║     ██╔██╗ ██║     ██║      ${MAGENTA}│" \
+"│ ${CYAN}  ╚██╗ ██╔╝╚██╗ ██╔╝██║     ██║╚██╗██║     ██║      ${MAGENTA}│" \
+"│ ${CYAN}   ╚████╔╝  ╚████╔╝ ███████╗██║ ╚████║     ███████╗ ${MAGENTA}│" \
+"│ ${YELLOW}     Vulnerable Lab Automation - Made for Hackers 🛡️      ${MAGENTA}│" \
+"│ ${BLUE}     Author: Sachin Nishad  |  GitHub: ${CYAN}github.com/sachinn403 ${MAGENTA}│" \
+"└────────────────────────────────────────────────────────────┘${NC}"
 
-echo "=============================="
-echo "Vulnerable App Installer Menu"
-echo "=============================="
 
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
