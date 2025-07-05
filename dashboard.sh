@@ -1,23 +1,19 @@
 #!/bin/bash
+
 # Colors
-GREEN='\033[0;32m'
-RED='\033[0;31m'
+CYAN='\033[0;36m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
-CYAN='\033[0;36m'
 MAGENTA='\033[1;35m'
-NC='\033[0m' # Reset
+NC='\033[0m'
 
-# Banner
-printf "${MAGENTA}┌────────────────────────────────────────────────────────────┐\n"
-printf "│ ${CYAN}  ██╗   ██╗██╗   ██╗██╗     ███╗   ██╗     ██╗      ${MAGENTA}│\n"
-printf "│ ${CYAN}  ██║   ██║██║   ██║██║     ████╗  ██║     ██║      ${MAGENTA}│\n"
-printf "│ ${CYAN}  ██║   ██║██║   ██║██║     ██╔██╗ ██║     ██║      ${MAGENTA}│\n"
-printf "│ ${CYAN}  ╚██╗ ██╔╝╚██╗ ██╔╝██║     ██║╚██╗██║     ██║      ${MAGENTA}│\n"
-printf "│ ${CYAN}   ╚████╔╝  ╚████╔╝ ███████╗██║ ╚████║     ███████╗ ${MAGENTA}│\n"
-printf "│ ${YELLOW}     Vulnerable Lab Automation - Made for Hackers 🛡️      ${MAGENTA}│\n"
-printf "│ ${BLUE}     Author: Sachin Nishad  |  GitHub: ${CYAN}github.com/sachinn403 ${MAGENTA}│\n"
-printf "└────────────────────────────────────────────────────────────┘${NC}\n"
+printf "${CYAN} ██╗   ██╗██╗   ██╗██╗     ███╗   ██╗     ██╗      \n"
+printf "${CYAN} ██║   ██║██║   ██║██║     ████╗  ██║     ██║      \n"
+printf "${CYAN} ██║   ██║██║   ██║██║     ██╔██╗ ██║     ██║      \n"
+printf "${CYAN} ╚██╗ ██╔╝╚██╗ ██╔╝██║     ██║╚██╗██║     ██║      \n"
+printf "${CYAN}  ╚████╔╝  ╚████╔╝ ███████╗██║ ╚████║     ███████╗ \n"
+printf "${YELLOW}   Vulnerable Lab Automation - Made for Hackers 🛡      \n"
+printf "${BLUE}   Author: Sachin Nishad  |  GitHub: ${CYAN}github.com/sachinn403${MAGENTA}${NC}\n"
 
 
 
