@@ -1,0 +1,50 @@
+1|DVWA|docker|sagikazarmark/dvwa
+2|Juice Shop|docker|bkimminich/juice-shop
+3|VulnerableApp|git|https://github.com/SasanLabs/VulnerableApp.git
+4|WebGoat|docker|webgoat/webgoat
+5|WebGoat 7.1|docker|webgoat/webgoat:7.1
+6|SQLi-Labs|docker|acgpiano/sqli-labs
+7|bWAPP|docker|raesene/bwapp
+8|Mutillidae|git|https://github.com/webpwnized/mutillidae-docker.git
+9|DVGA|docker|dolevf/dvga
+10|RESTurant API|git|https://github.com/theowni/Damn-Vulnerable-RESTaurant-API-Game.git
+11|Pixi|git|https://github.com/DevSlop/Pixi.git
+12|PyGoat|docker|pygoat/pygoat:latest
+13|SSRF Lab|docker|youyouorz/ssrf-vulnerable-lab
+14|VulnBank|git|https://github.com/Commando-X/vuln-bank.git
+15|VulnLab|docker|yavuzlar/vulnlab
+16|WrongSecrets|docker|jeroenwillemsen/wrongsecrets:latest-no-vault
+17|Yrprey|git|https://github.com/yrprey/yrprey-application.git
+18|Zero Health|git|https://github.com/aligorithm/zero-health.git
+19|Vulnerable WordPress|docker|wpscanteam/vulnerablewordpress
+20|Security Ninjas|docker|opendns/security-ninjas
+21|Altoro Mutual|docker|hclproducts/altoroj
+22|Vulnerable GraphQL API|docker|carvesystems/vulnerable-graphql-api
+23|BodgeIt Store|docker|psiinon/bodgeit
+24|crAPI|git|https://github.com/OWASP/crAPI.git
+25|VAmPI|docker|erev0s/vampi
+26|NodeGoat|docker|owasp/nodegoat
+27|Security Shepherd|docker|owasp/securityshepherd
+28|UnSAFE Bank|docker|lucideus/unsafe_bank
+29|OWASP VulnerableApp-facade|docker|sasanlabs/owasp-vulnerableapp-facade
+30|Vulnado|docker|scalesec/vulnado
+31|DVIA|docker|appsecco/dvia
+32|Damn Vulnerable C# Application|docker|abhaybhargav/dvcsharp
+33|Template Injection Playground|docker|james9909/template-injection-playground
+34|Wayfarer|docker|stratussecurity/wayfarer
+35|Hackazon|docker|opportunisticsecurity/hackazon
+36|RailsGoat|docker|owasp/railsgoat
+37|Defectdojo|git|https://github.com/DefectDojo/django-DefectDojo
+38|Vulhub|git/docker-compose|https://github.com/vulhub/vulhub
+39|Juice Shop CTF|docker|bkimminich/juice-shop-ctf
+40|DSVW|docker|infosecdojo/dsvw
+41|AppSec Lab|git|https://github.com/SecurityBreachIO/AppSec-Lab
+42|Vulnerable Flask App|git|https://github.com/Brum3ns/Vulnerable-Flask-App
+43|Vulnerable PHP App|docker|vulnerables/web-dvwa:php8.1
+44|phpBB CVE-2020-8229|git|https://github.com/vulhub/phpbb-CVE-2020-8229
+45|Jenkins CVE-2017-1000353|git|https://github.com/vulhub/jenkins-CVE-2017-1000353
+46|Node.js CMS SQLi Lab|git|https://github.com/vulhub/node-cms-sqli-lab
+47|Mongo Express Vulnerable|docker|vulnerables/mongo-express
+48|Magento CVE-2015-1397|git|https://github.com/vulhub/magento-CVE-2015-1397
+49|Joomscan Target|docker+git|https://github.com/OWASP/joomscan
+50|DVNA|docker|appsecco/dvna
