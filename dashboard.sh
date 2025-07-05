@@ -1,5 +1,10 @@
 #!/bin/bash
-
+# Colors
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m'
 
 
 echo "=============================="
@@ -13,12 +18,17 @@ RUN_SCRIPT="$SCRIPT_DIR/docker/docker_runner.sh"
 COMMON_FILE="$SCRIPT_DIR/common.sh"
 INSTALL_DIR="/opt/vuln-lab-setup"
 
-# Colors
-GREEN='\033[0;32m'
-RED='\033[0;31m'
-YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
-NC='\033[0m'
+# Clean up app_list.txt (remove extra spaces and trailing whitespace) 
+APP_LIST="$SCRIPT_DIR/resources/app_list.txt"
+if [ -f "$APP_LIST" ]; then
+    sed -i 's/ *| */|/g' "$APP_LIST"
+    sed -i 's/[[:space:]]*$//' "$APP_LIST"
+else
+    echo -e "${RED}[!] app_list.txt not found at $APP_LIST${NC}"
+    exit 1
+fi
+
+
 
 if [ "$EUID" -ne 0 ]; then
     echo -e "${RED}[!] Please run this script as root (use sudo)${NC}"
