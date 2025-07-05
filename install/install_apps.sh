@@ -11,8 +11,29 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m'
 
-mkdir -p "$INSTALL_DIR"
+# Check required dependencies
+for cmd in git docker wget; do
+    command -v "$cmd" >/dev/null 2>&1 || {
+        echo -e "${RED}[!] Required command '$cmd' not found. Please install it.${NC}"
+        exit 1
+    }
+done
 
+# Validate application list file
+if [ ! -s "$APP_LIST" ]; then
+    echo -e "${RED}[!] Application list is empty or missing: $APP_LIST${NC}"
+    exit 1
+fi
+
+# Create install directory if not exists
+if [ ! -d "$INSTALL_DIR" ]; then
+    mkdir -p "$INSTALL_DIR" || {
+        echo -e "${RED}[!] Failed to create install directory: $INSTALL_DIR${NC}"
+        exit 1
+    }
+fi
+
+# Display install menu
 echo -e "${BLUE}Install vulnerable apps:${NC}"
 echo "1. Install All"
 echo "2. Select apps"
@@ -20,6 +41,7 @@ echo "3. Go Back"
 read -rp "Enter your choice [1/2/3]: " install_choice
 
 if [ "$install_choice" == "3" ]; then
+    echo -e "${YELLOW}Returning to main menu...${NC}"
     exit 0
 fi
 
@@ -52,13 +74,23 @@ for sel in "${selected_ids[@]}"; do
         echo -e "${GREEN}[+] Installing: $name${NC}"
         case "$type" in
             git)
-                git clone "$url" "$INSTALL_DIR/$(basename "$url" .git)"
+                target_dir="$INSTALL_DIR/$(basename "$url" .git)"
+                if [ -d "$target_dir" ]; then
+                    echo -e "${YELLOW}[!] $name already exists at $target_dir. Skipping...${NC}"
+                else
+                    git clone "$url" "$target_dir"
+                fi
                 ;;
             release)
                 fname="$(basename "$url")"
-                wget -q --show-progress -O "$INSTALL_DIR/$fname" "$url"
+                if [ -f "$INSTALL_DIR/$fname" ]; then
+                    echo -e "${YELLOW}[!] $fname already exists. Skipping...${NC}"
+                else
+                    wget -q --show-progress -O "$INSTALL_DIR/$fname" "$url"
+                fi
                 ;;
             docker)
+                echo -e "${BLUE}[*] Pulling Docker image: $url${NC}"
                 docker pull "$url"
                 ;;
             *)
@@ -69,3 +101,5 @@ for sel in "${selected_ids[@]}"; do
         echo -e "${RED}[!] Invalid ID: $sel${NC}"
     fi
 done
+
+echo -e "${GREEN}[✔] Installation process completed.${NC}"
